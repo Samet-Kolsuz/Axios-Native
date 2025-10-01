@@ -1,0 +1,218 @@
+{
+  "products": [
+    {
+      "id": "4",
+      "name": "Smartwatch",
+      "description": "Fitness tracking smartwatch",
+      "price": 149,
+      "stock": 100,
+      "brand": "FitTime",
+      "rating": 4.4,
+      "imageUrl": "https://picsum.photos/200/200?random=4",
+      "color": "Blue",
+      "weight": "50g",
+      "dimensions": "40x40x10mm"
+    },
+    {
+      "id": "5",
+      "name": "merhabalarrr!!!",
+      "description": "Portable waterproof speaker",
+      "price": "89",
+      "stock": 70,
+      "brand": "AudioWave",
+      "rating": 4.3,
+      "imageUrl": "https://picsum.photos/200/200?random=5",
+      "color": "Red",
+      "weight": "500g",
+      "dimensions": "200x80x80mm"
+    },
+    {
+      "id": "6",
+      "name": "İngilizce Kamera",
+      "description": "Professional DSLR with 24MP sensor",
+      "price": "599",
+      "stock": 20,
+      "brand": "PhotoPro",
+      "rating": 4.8,
+      "imageUrl": "https://picsum.photos/200/200?random=6",
+      "color": "Black",
+      "weight": "1.5kg",
+      "dimensions": "140x100x70mm"
+    },
+    {
+      "id": "7",
+      "name": "Gaming Mouse",
+      "description": "RGB gaming mouse with adjustable DPI",
+      "price": 49,
+      "stock": 150,
+      "brand": "GameX",
+      "rating": 4.5,
+      "imageUrl": "https://picsum.photos/200/200?random=7",
+      "color": "Black",
+      "weight": "120g",
+      "dimensions": "130x70x40mm"
+    },
+    {
+      "id": "8",
+      "name": "Mechanical Keyboard",
+      "description": "Mechanical keyboard with blue switches",
+      "price": 89,
+      "stock": 60,
+      "brand": "KeyMaster",
+      "rating": 4.6,
+      "imageUrl": "https://picsum.photos/200/200?random=8",
+      "color": "White",
+      "weight": "800g",
+      "dimensions": "450x150x50mm"
+    },
+    {
+      "id": "9",
+      "name": "External Hard Drive",
+      "description": "2TB portable hard drive",
+      "price": 75,
+      "stock": 90,
+      "brand": "DataStore",
+      "rating": 4.4,
+      "imageUrl": "https://picsum.photos/200/200?random=9",
+      "color": "Black",
+      "weight": "250g",
+      "dimensions": "110x80x20mm"
+    },
+    {
+      "id": "10",
+      "name": "4K Monitor",
+      "description": "27-inch 4K UHD monitor",
+      "price": 399,
+      "stock": 25,
+      "brand": "VisualPro",
+      "rating": 4.7,
+      "imageUrl": "https://picsum.photos/200/200?random=10",
+      "color": "Silver",
+      "weight": "5kg",
+      "dimensions": "620x370x50mm"
+    },
+    {
+      "id": "da19",
+      "name": "Harika Ürün",
+      "price": "1000",
+      "imageUrl": "https://picsum.photos/200",
+      "description": "yeni bir ürün"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Mike Brown",
+      "email": "mike@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Emily Davis",
+      "email": "emily@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Chris Wilson",
+      "email": "chris@example.com"
+    },
+    {
+      "id": "6",
+      "name": "Sarah Johnson",
+      "email": "sarah@example.com"
+    },
+    {
+      "id": "7",
+      "name": "David Lee",
+      "email": "david@example.com"
+    },
+    {
+      "id": "8",
+      "name": "Laura Miller",
+      "email": "laura@example.com"
+    },
+    {
+      "id": "9",
+      "name": "Daniel Taylor",
+      "email": "daniel@example.com"
+    },
+    {
+      "id": "10",
+      "name": "Sophia Anderson",
+      "email": "sophia@example.com"
+    }
+  ],
+  "carts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "items": [
+        {
+          "productId": 2,
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "items": [
+        {
+          "productId": 3,
+          "quantity": 1
+        },
+        {
+          "productId": 7,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "userId": 3,
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "userId": 4,
+      "items": [
+        {
+          "productId": 4,
+          "quantity": 1
+        },
+        {
+          "productId": 6,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "userId": 5,
+      "items": [
+        {
+          "productId": 8,
+          "quantity": 2
+        }
+      ]
+    }
+  ]
+}
