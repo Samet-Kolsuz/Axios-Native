@@ -1,9 +1,9 @@
-import { ActivityIndicator, FlatList, Image, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import api from '../utils/api';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const MainPage = () => {
+const MainPage = ({ navigation }) => {
     const [products, setProducts] = useState();
     const [loading, setLoading] = useState(true);
 
@@ -35,7 +35,9 @@ const MainPage = () => {
                 contentContainerStyle={styles.listContainer}
                 data={products}
                 renderItem={({ item, index }) => (
-                    <View>
+                    <TouchableOpacity
+                    onPress={()=> navigation.navigate('ProductPage',{id: item.id})}
+                    >
                         <View style={styles.card}>
                         <View style={styles.imgBg}>
                             <Image source={{ uri: item?.image }} style={styles.img} />
@@ -44,7 +46,7 @@ const MainPage = () => {
                             <Text style={{width:'100%'}}>{item?.title}</Text>
                         </View>
                     </View>
-                    </View>
+                    </TouchableOpacity>
                 )}
                 keyExtractor={item => item.id}
             />
