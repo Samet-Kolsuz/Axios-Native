@@ -1,12 +1,23 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useFocusEffect } from '@react-navigation/native';
 import api from '../utils/api';
 
-const ProductPage = ({ route }) => {
-  const { id } = route.params;
+const ProductPage = ({ navigation, route }) => {
+  const { id, setProducts, products } = route.params;
   const [product, setProduct] = useState(null);
-  useFocusEffect(() => {
+
+  const handleDelete = async () => {
+    api.delete(`/products/${id}`)
+      .then(res => {
+        setProducts(products.filter(item => item.id !== id));
+        navigation.goBack();
+      })
+      .catch(err => console.log(err))
+  }
+
+
+  useEffect(() => {
     const getProduct = async () => {
       api.get(`/products/${id}`)
         .then(res => {
@@ -16,7 +27,7 @@ const ProductPage = ({ route }) => {
     }
     getProduct();
 
-  })
+  }, [])
 
   return (
     <View style={{ flex: 1 }}>
@@ -27,9 +38,9 @@ const ProductPage = ({ route }) => {
         <Text style={styles.title} numberOfLines={2} paddingHorizontal={10}>{product?.title}</Text>
         <Text style={styles.description}>{product?.description}</Text>
       </View>
-      <View style={{ flex: 1 }}>
-        <TouchableOpacity style={styles.addToCartButton}>
-          <Text style={styles.addToCartButtonText}>Add to Cart</Text>
+      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+        <TouchableOpacity style={styles.addToCartButton} onPress={() => handleDelete()}>
+          <Text style={styles.addToCartButtonText}>Delete</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -60,5 +71,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 20,
     paddingHorizontal: 10
+  },
+  addToCartButton: {
+    backgroundColor:"rgb(253,80,80)",
+    margin:"auto",
+    padding:15,
+    borderRadius:10
+
+  },
+  addToCartButtonText:{
+    color:"white",
+    fontWeight:"600",
+    fontSize:16
   }
 })

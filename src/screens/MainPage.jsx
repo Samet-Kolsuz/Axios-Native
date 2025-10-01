@@ -36,7 +36,7 @@ const MainPage = ({ navigation }) => {
                 data={products}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity
-                    onPress={()=> navigation.navigate('ProductPage',{id: item.id})}
+                    onPress={()=> navigation.navigate('ProductPage',{id: item.id, setProducts, products})}
                     >
                         <View style={styles.card}>
                         <View style={styles.imgBg}>
